@@ -1,0 +1,11 @@
+{
+  "include": ["src/*"],
+  "exclude": ["dist"],
+  "compilerOptions": {
+    "outDir": "dist",
+    "declaration": true,
+    "declarationDir": ".",
+    "jsx": "react",
+    "allowSyntheticDefaultImports": true
+  }
+}
