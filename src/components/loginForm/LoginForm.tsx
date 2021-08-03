@@ -1,7 +1,13 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import { LoginButton } from "@inrupt/solid-ui-react";
-import { Button, Input, InputGroup, InputRightAddon, Container } from "@chakra-ui/react";
+import {
+  Button,
+  Input,
+  InputGroup,
+  InputRightAddon,
+  Container,
+} from "@chakra-ui/react";
 
 export function LoginForm(): React.ReactElement {
   // TODO: these are better placed in a configuration file
