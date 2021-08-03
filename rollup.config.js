@@ -1,11 +1,12 @@
-import typescript from "@rollup/plugin-typescript";
-import jsx from "rollup-plugin-jsx";
+import sucrase from "@rollup/plugin-sucrase";
 
 export default {
   input: "src/index.ts",
   plugins: [
-    typescript({ tsconfig: "./tsconfig.json" }),
-    jsx({ factory: "React.createElement" }),
+    sucrase({
+      exclude: ["node_modules/*"],
+      transforms: ["jsx", "typescript"],
+    }),
   ],
   external: ["react"],
   output: [

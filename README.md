@@ -15,6 +15,10 @@ This is a collection of shared front-end components for multi-user-domain projec
 
 ## Getting Started
 
+Install: `npm install @multi-user-domain/mud-lib` or `yarn add @multi-user-domain/mud-lib`
+
+## Contributing
+
 ### Adding a new component
 
 Run this hygen command:
