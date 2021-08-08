@@ -1,3 +1,4 @@
+import { Stack, Box } from "@chakra-ui/react";
 import { Thing } from "@inrupt/solid-client";
 
 export interface IRowComponent {
@@ -28,8 +29,12 @@ export function ThingList({
   const Row = rowComponent;
 
   for (let i = 0; i < things.length; i++) {
-    rows.push(<Row thing={things[i]} key={i} selectHandler={selectThing} />);
+    rows.push(
+      <Box key={i}>
+        <Row thing={things[i]} selectHandler={selectThing} />
+      </Box>
+    );
   }
 
-  return <>{rows}</>;
+  return <Stack spacing={1}>{rows}</Stack>;
 }
