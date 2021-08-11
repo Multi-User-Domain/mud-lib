@@ -2,6 +2,9 @@
 
 This is a collection of shared front-end components for multi-user-domain projects.
 
+![npm bundle size](https://img.shields.io/bundlephobia/min/@multi-user-domain/mud-lib)
+![npm (scoped)](https://img.shields.io/npm/v/@multi-user-domain/mud-lib)
+
 ## Tech used
 
 - React
