@@ -1,3 +1,4 @@
+import React from "react";
 import { Image, Circle, Center } from "@chakra-ui/react";
 import { getUrl } from "@inrupt/solid-client";
 import { FOAF } from "@inrupt/lit-generated-vocab-common";

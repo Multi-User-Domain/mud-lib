@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders image when present 1`] = `
+<DocumentFragment>
+  <img
+    class="chakra-image__placeholder css-0"
+  />
+</DocumentFragment>
+`;
+
+exports[`renders placeholder when no image present 1`] = `
+<DocumentFragment>
+  <div
+    class="css-tkevr6"
+  >
+    <div
+      class="css-iwlzu"
+    />
+  </div>
+</DocumentFragment>
+`;
