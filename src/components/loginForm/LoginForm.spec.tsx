@@ -4,5 +4,6 @@ import { render } from "@testing-library/react";
 import { LoginForm } from "./LoginForm";
 
 it("renders", () => {
-  render(<LoginForm />);
+  const { asFragment } = render(<LoginForm />);
+  expect(asFragment()).toMatchSnapshot();
 });
