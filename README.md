@@ -30,6 +30,17 @@ Run this hygen command:
 npx hygen react-component new <component-name>
 ```
 
+### Testing local changes in another project
+
+To test local changes in another project using this library (e.g. in [mud-react](https://github.com/Multi-User-Domain/mud-react)), you can use `npm link` or `yarn link`, commands which create an operating system link to the local version of the library:
+
+```
+cd /path/to/mud-lib/
+yarn link
+cd /path/to/other/project/
+yarn link "@multi-user-domain/mud-lib"
+```
+
 ### Releasing
 
 Releases are automated via semantic release, which runs on all pushes to the master and next branches. If you push to master, the release will go out as a proper release in npm under the 'latest' tag. If you push to next, it goes out under the 'next' tag.
