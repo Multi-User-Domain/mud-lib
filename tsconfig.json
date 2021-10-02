@@ -15,7 +15,7 @@
     "isolatedModules": true,
     "rootDir": "src",
     "outDir": "dist",
-    "jsx": "react-jsx",
+    "jsx": "react",
     "allowSyntheticDefaultImports": true
   }
 }
