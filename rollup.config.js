@@ -10,7 +10,10 @@ export default {
   input: "src/index.ts",
   plugins: [
     builtins(),
-    typescript({ tsconfig: "./tsconfig.json" }),
+    typescript({
+      tsconfig: "./tsconfig.json",
+      exclude: ["node_modules/**"],
+    }),
     nodeResolve({
       extensions: [".js", ".jsx", ".ts", ".tsx"],
       module: true,
@@ -35,14 +38,23 @@ export default {
     }),
     json(),
   ],
-  external: ["react"],
+  external: [
+    "react",
+    "solid-auth-client",
+    "@inrupt/lit-generated-vocab-common",
+    "@inrupt/solid-client",
+    "@inrupt/solid-ui-react",
+    "n3",
+  ],
   output: [
     {
-      file: "dist/index.js",
+      dir: "dist/cjs",
+      entryFileNames: "[name].js",
       format: "cjs",
     },
     {
-      file: "dist/index.es.js",
+      dir: "dist/es",
+      entryFileNames: "[name].es.js",
       format: "es",
     },
   ],

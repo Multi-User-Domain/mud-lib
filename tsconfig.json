@@ -1,9 +1,9 @@
 {
   "lib": ["dom", "dom.iterable", "esnext"],
   "include": ["src/*"],
-  "exclude": ["dist", "node_modules"],
+  "exclude": ["dist", "node_modules/**", "**/*.internal.*"],
   "compilerOptions": {
-    "target": "es5",
+    "target": "es2017",
     "moduleResolution": "node",
     "allowJs": true,
     "skipLibCheck": true,
@@ -14,7 +14,7 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "rootDir": "src",
-    "outDir": "dist",
+    //"outDir": "dist",
     "jsx": "react",
     "allowSyntheticDefaultImports": true
   }

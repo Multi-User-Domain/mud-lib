@@ -68,9 +68,6 @@
   },
   "peerDependencies": {
     "@chakra-ui/react": "^1.6.5",
-    "@inrupt/lit-generated-vocab-common": "^0.3.11",
-    "@inrupt/solid-client": "^0.4.0",
-    "@inrupt/solid-ui-react": "^2.4.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   },
@@ -87,6 +84,9 @@
     "url": "https://github.com/Multi-User-Domain/mud-lib.git"
   },
   "dependencies": {
-    "solid-auth-client": "^2.5.6"
+    "solid-auth-client": "^2.5.6",
+    "@inrupt/lit-generated-vocab-common": "^0.3.11",
+    "@inrupt/solid-client": "^0.4.0",
+    "@inrupt/solid-ui-react": "^2.4.0"
   }
 }
