@@ -10,12 +10,6 @@
     "@babel/preset-env": "^7.14.8",
     "@babel/preset-react": "^7.14.5",
     "@babel/preset-typescript": "^7.14.5",
-    "@chakra-ui/react": "^1.1.5",
-    "@emotion/react": "^11.1.4",
-    "@emotion/styled": "^11.0.0",
-    "@inrupt/eslint-config-base": "0.0.4",
-    "@inrupt/eslint-config-react": "0.0.4",
-    "@inrupt/lit-generated-vocab-common": "^0.3.11",
     "@rollup/plugin-babel": "^5.3.0",
     "@rollup/plugin-commonjs": "^20.0.0",
     "@rollup/plugin-json": "^4.1.0",
@@ -24,30 +18,15 @@
     "@rollup/plugin-typescript": "^8.2.5",
     "@semantic-release/git": "^9.0.0",
     "@semantic-release/npm": "^7.1.3",
-    "@testing-library/react": "^12.0.0",
     "@types/jest": "^26.0.24",
     "@types/react": "^17.0.15",
-    "@typescript-eslint/eslint-plugin": "^3.10.1",
-    "@typescript-eslint/parser": "^3.10.1",
     "babel-jest": "^27.0.6",
     "commitizen": "^4.2.4",
     "cz-conventional-changelog": "3.3.0",
-    "eslint": "^7.9.0",
-    "eslint-config-airbnb": "^18.2.0",
-    "eslint-config-prettier": "^6.11.0",
-    "eslint-plugin-import": "^2.22.0",
-    "eslint-plugin-jest": "^23.20.0",
-    "eslint-plugin-jsx-a11y": "^6.3.1",
-    "eslint-plugin-prettier": "^3.1.4",
-    "eslint-plugin-react": "^7.20.6",
-    "eslint-plugin-react-hooks": "^4.1.2",
-    "framer-motion": "^3.2.1",
     "husky": ">=6",
     "jest": "^27.0.6",
     "lint-staged": ">=10",
     "prettier": "2.3.2",
-    "react": "16.13.1",
-    "react-dom": "16.13.1",
     "rollup": "^2.55.1",
     "rollup-plugin-polyfill-node": "^0.7.0",
     "semantic-release": "^17.4.4",
@@ -65,9 +44,6 @@
     "semantic-release": "semantic-release"
   },
   "peerDependencies": {
-    "@chakra-ui/react": "^1.6.5",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1"
   },
   "lint-staged": {
     "*.{js,jsx,css,md,ts,tsx}": "prettier --write"
@@ -82,9 +58,5 @@
     "url": "https://github.com/Multi-User-Domain/mud-lib.git"
   },
   "dependencies": {
-    "@inrupt/lit-generated-vocab-common": "^0.3.11",
-    "@inrupt/solid-client": "^0.4.0",
-    "@inrupt/solid-ui-react": "^1.2.1",
-    "solid-auth-client": "^2.5.6"
   }
 }

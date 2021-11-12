@@ -17,7 +17,6 @@ export default {
     nodeResolve({
       extensions: [".js", ".jsx", ".ts", ".tsx"],
       module: true,
-      browser: true,
     }),
     replace({
       "process.env.NODE_ENV": JSON.stringify("development"),
@@ -25,8 +24,7 @@ export default {
     babel({
       presets: [
         ["@babel/preset-env", { targets: { node: "current" } }],
-        //["@babel/preset-react", {"runtime": "automatic"}],
-        "@babel/preset-react",
+        //"@babel/preset-react",
         "@babel/preset-typescript",
       ],
       extensions: [".js", ".jsx", ".ts", ".tsx"],
@@ -39,12 +37,15 @@ export default {
     json(),
   ],
   external: [
-    "react",
+    /*"react",
+    "@chakra-ui/react",
+    "@emotion/react",
+    "@emotion/styled",
     "solid-auth-client",
     "@inrupt/lit-generated-vocab-common",
     "@inrupt/solid-client",
     "@inrupt/solid-ui-react",
-    "n3",
+    "n3",*/
   ],
   output: [
     {
