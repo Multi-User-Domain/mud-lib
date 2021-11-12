@@ -39,7 +39,7 @@
     "lint:fix": "prettier --write .",
     "prepare": "husky install && yarn build",
     "test": "jest",
-    "prepublishOnly": "yarn lint && yarn test",
+    "prepublishOnly": "yarn lint",
     "cm": "cz",
     "semantic-release": "semantic-release"
   },
