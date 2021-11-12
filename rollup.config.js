@@ -30,13 +30,17 @@ export default {
       extensions: [".js", ".jsx", ".ts", ".tsx"],
       exclude: /node_modules/,
     }),
-    commonjs({
-      extensions: [".js", ".jsx", ".ts", ".tsx"],
-      include: /node_modules/,
-    }),
+    // commonjs({
+    //   extensions: [".js", ".jsx", ".ts", ".tsx"],
+    //   exclude: /node_modules/,
+    // }),
     json(),
   ],
-  external: [],
+  external: [
+    "@inrupt/lit-generated-vocab-common",
+    "@inrupt/solid-client",
+    "@rdfjs/dataset",
+  ],
   output: [
     {
       dir: "dist/cjs",

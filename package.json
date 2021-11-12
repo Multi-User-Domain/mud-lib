@@ -56,5 +56,9 @@
     "type": "git",
     "url": "https://github.com/Multi-User-Domain/mud-lib.git"
   },
-  "dependencies": {}
+  "dependencies": {
+    "@inrupt/lit-generated-vocab-common": "^0.3.11",
+    "@inrupt/solid-client": "^0.4.0",
+    "@rdfjs/dataset": "1.1.1"
+  }
 }
