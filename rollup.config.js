@@ -4,12 +4,12 @@ import babel from "@rollup/plugin-babel";
 import replace from "@rollup/plugin-replace";
 import { nodeResolve } from "@rollup/plugin-node-resolve";
 import json from "@rollup/plugin-json";
-import builtins from "rollup-plugin-node-builtins";
+import polyfillNode from "rollup-plugin-polyfill-node";
 
 export default {
   input: "src/index.ts",
   plugins: [
-    builtins(),
+    polyfillNode(),
     typescript({
       tsconfig: "./tsconfig.json",
       exclude: ["node_modules/**"],
