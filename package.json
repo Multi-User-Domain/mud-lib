@@ -43,8 +43,7 @@
     "cm": "cz",
     "semantic-release": "semantic-release"
   },
-  "peerDependencies": {
-  },
+  "peerDependencies": {},
   "lint-staged": {
     "*.{js,jsx,css,md,ts,tsx}": "prettier --write"
   },
@@ -57,6 +56,5 @@
     "type": "git",
     "url": "https://github.com/Multi-User-Domain/mud-lib.git"
   },
-  "dependencies": {
-  }
+  "dependencies": {}
 }
