@@ -1,8 +1,8 @@
 {
   "name": "@multi-user-domain/mud-lib",
   "version": "1.0.0",
-  "main": "dist/index.js",
-  "module": "dist/index.es.js",
+  "main": "dist/cjs/index.js",
+  "module": "dist/es/index.es.js",
   "author": "Matt Tennison <matt@matttennison.com>",
   "license": "MIT",
   "devDependencies": {
