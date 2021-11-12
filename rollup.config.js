@@ -24,16 +24,10 @@ export default {
     babel({
       presets: [
         ["@babel/preset-env", { targets: { node: "current" } }],
-        //"@babel/preset-react",
         "@babel/preset-typescript",
       ],
       extensions: [".js", ".jsx", ".ts", ".tsx"],
-      exclude: /node_modules/,
     }),
-    // commonjs({
-    //   extensions: [".js", ".jsx", ".ts", ".tsx"],
-    //   exclude: /node_modules/,
-    // }),
     json(),
   ],
   external: [
