@@ -1,6 +1,6 @@
 {
   "name": "@multi-user-domain/mud-lib",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "main": "dist/cjs/index.js",
   "module": "dist/es/index.es.js",
   "author": "Matt Tennison <matt@matttennison.com>",
