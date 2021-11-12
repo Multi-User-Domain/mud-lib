@@ -36,17 +36,7 @@ export default {
     }),
     json(),
   ],
-  external: [
-    /*"react",
-    "@chakra-ui/react",
-    "@emotion/react",
-    "@emotion/styled",
-    "solid-auth-client",
-    "@inrupt/lit-generated-vocab-common",
-    "@inrupt/solid-client",
-    "@inrupt/solid-ui-react",
-    "n3",*/
-  ],
+  external: [],
   output: [
     {
       dir: "dist/cjs",
