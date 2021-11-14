@@ -65,4 +65,5 @@ export const MUD_DIALOGUE = {
   includeContinuePrompt: MUD_DIALOGUE_BASE_URL + "#includeContinuePrompt",
   selectFollowup: MUD_DIALOGUE_BASE_URL + "#selectFollowup",
   getResponses: MUD_DIALOGUE_BASE_URL + "#getResponses",
+  responses: MUD_DIALOGUE_BASE_URL + "#responses",
 };
