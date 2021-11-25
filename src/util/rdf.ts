@@ -28,6 +28,20 @@ export const getFilteredThings: (
   return ret;
 };
 
+/**
+ * checks common name properties on the Thing (VCARD, FOAF) and returns the first it can find
+ * @returns the name of a given Thing, or null if unable to find it
+ */
+export const getThingName = (thing: Thing): string => {
+  const NAME_PROPERTIES = [VCARD.fn, FOAF.name];
+  for (let PROP of NAME_PROPERTIES) {
+    const name = getStringNoLocale(thing, PROP);
+
+    if (name != null) return name;
+  }
+  return null;
+};
+
 export async function turtleToTriples(raw: string): Promise<Quad[]> {
   const format = "text/turtle";
   const n3 = await loadN3();
@@ -62,7 +76,6 @@ export async function triplesToTurtle(quads: Quad[]): Promise<string> {
   writer.addQuads(triples);
   const writePromise = new Promise<string>((resolve, reject) => {
     writer.end((error, result) => {
-      /* istanbul ignore if [n3.js doesn't actually pass an error nor a result, apparently: https://github.com/rdfjs/N3.js/blob/62682e48c02d8965b4d728cb5f2cbec6b5d1b1b8/src/N3Writer.js#L290] */
       if (error) {
         return reject(error);
       }
@@ -91,7 +104,6 @@ async function loadN3() {
   // for Node, or adds a default export for Webpack. See
   // https://github.com/rdfjs/N3.js/issues/196
   const n3Module = await import("n3");
-  /* istanbul ignore if: the package provides named exports in the unit test environment */
   if (typeof n3Module.default !== "undefined") {
     return n3Module.default;
   }
@@ -106,18 +118,4 @@ export const parseTurtleToSolidDataset = async (
   triples.forEach((triple) => resource.add(triple));
 
   return resource;
-};
-
-/**
- * checks common name properties on the Thing (VCARD, FOAF) and returns the first it can find
- * @returns the name of a given Thing, or null if unable to find it
- */
-export const getThingName = (thing: Thing): string => {
-  const NAME_PROPERTIES = [VCARD.fn, FOAF.name];
-  for (let PROP of NAME_PROPERTIES) {
-    const name = getStringNoLocale(thing, PROP);
-
-    if (name != null) return name;
-  }
-  return null;
 };

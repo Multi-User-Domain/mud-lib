@@ -18,6 +18,11 @@ export default {
       extensions: [".js", ".jsx", ".ts", ".tsx"],
       module: true,
     }),
+    commonjs({
+      extensions: [".js", ".jsx", ".ts", ".tsx"],
+      include: "/node_modules/",
+      module: true,
+    }),
     replace({
       "process.env.NODE_ENV": JSON.stringify("development"),
     }),
@@ -30,17 +35,8 @@ export default {
     }),
     json(),
   ],
-  external: [
-    "@inrupt/lit-generated-vocab-common",
-    "@inrupt/solid-client",
-    "@rdfjs/dataset",
-  ],
+  external: ["n3", "@inrupt/solid-client", "@rdfjs/dataset"],
   output: [
-    {
-      dir: "dist/cjs",
-      entryFileNames: "[name].js",
-      format: "cjs",
-    },
     {
       dir: "dist/es",
       entryFileNames: "[name].es.js",
