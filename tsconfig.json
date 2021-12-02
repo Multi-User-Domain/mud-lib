@@ -1,6 +1,6 @@
 {
   "lib": ["dom", "dom.iterable", "esnext"],
-  "include": ["src/*"],
+  "include": ["src/*", "temp/components"],
   "exclude": ["dist", "node_modules/**", "**/*.internal.*"],
   "compilerOptions": {
     "target": "es2017",
