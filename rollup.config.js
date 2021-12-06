@@ -18,31 +18,25 @@ export default {
       extensions: [".js", ".jsx", ".ts", ".tsx"],
       module: true,
     }),
+    commonjs({
+      extensions: [".js", ".jsx", ".ts", ".tsx"],
+      include: "/node_modules/",
+      module: true,
+    }),
     replace({
       "process.env.NODE_ENV": JSON.stringify("development"),
     }),
     babel({
       presets: [
         ["@babel/preset-env", { targets: { node: "current" } }],
-        //"@babel/preset-react",
         "@babel/preset-typescript",
       ],
       extensions: [".js", ".jsx", ".ts", ".tsx"],
-      exclude: /node_modules/,
-    }),
-    commonjs({
-      extensions: [".js", ".jsx", ".ts", ".tsx"],
-      include: /node_modules/,
     }),
     json(),
   ],
-  external: [],
+  external: ["n3", "@inrupt/solid-client", "@rdfjs/dataset"],
   output: [
-    {
-      dir: "dist/cjs",
-      entryFileNames: "[name].js",
-      format: "cjs",
-    },
     {
       dir: "dist/es",
       entryFileNames: "[name].es.js",
