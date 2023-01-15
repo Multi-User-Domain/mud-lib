@@ -8,6 +8,8 @@ const MUD_LOGIC_BASE_URL =
   "https://raw.githubusercontent.com/Multi-User-Domain/vocab/main/mudlogic.ttl";
 const MUD_CHARACTER_BASE_URL =
   "https://raw.githubusercontent.com/Multi-User-Domain/vocab/main/mudchar.ttl";
+const MUD_DIALOGUE_BASE_URL =
+  "https://raw.githubusercontent.com/Multi-User-Domain/vocab/main/muddialogue.ttl";
 
 export const MUD = {
   account: MUD_BASE_URL + "#Account",
@@ -53,4 +55,15 @@ export const MUD_LOGIC = {
   Task: MUD_LOGIC_BASE_URL + "#Task",
   Transit: MUD_LOGIC_BASE_URL + "#Transit",
   actAt: MUD_LOGIC_BASE_URL + "#actAt",
+};
+
+export const MUD_DIALOGUE = {
+  Message: MUD_DIALOGUE_BASE_URL + "#Message",
+  performer: MUD_DIALOGUE_BASE_URL + "#performer",
+  content: MUD_DIALOGUE_BASE_URL + "#content",
+  shorthand: MUD_DIALOGUE_BASE_URL + "#shorthand",
+  includeContinuePrompt: MUD_DIALOGUE_BASE_URL + "#includeContinuePrompt",
+  selectFollowup: MUD_DIALOGUE_BASE_URL + "#selectFollowup",
+  getResponses: MUD_DIALOGUE_BASE_URL + "#getResponses",
+  responses: MUD_DIALOGUE_BASE_URL + "#responses",
 };
