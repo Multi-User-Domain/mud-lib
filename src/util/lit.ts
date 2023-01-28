@@ -2,6 +2,8 @@
 
 const MUD_BASE_URL =
   "https://raw.githubusercontent.com/Multi-User-Domain/vocab/main/mud.ttl";
+const MUD_ACCT_BASE_URL =
+  "https://raw.githubusercontent.com/Multi-User-Domain/vocab/main/mudacct.ttl";
 const MUD_CONTENT_BASE_URL =
   "https://raw.githubusercontent.com/Multi-User-Domain/vocab/main/mudcontent.ttl";
 const MUD_LOGIC_BASE_URL =
@@ -12,9 +14,6 @@ const MUD_DIALOGUE_BASE_URL =
   "https://raw.githubusercontent.com/Multi-User-Domain/vocab/main/muddialogue.ttl";
 
 export const MUD = {
-  account: MUD_BASE_URL + "#Account",
-  charactersList: MUD_BASE_URL + "#CharacterList",
-
   Configuration: MUD_BASE_URL + "#Configuration",
   worldEndpoint: MUD_BASE_URL + "#worldEndpoint",
   sceneGenerationEndpoint: MUD_BASE_URL + "#sceneGenerationEndpoint",
@@ -27,6 +26,11 @@ export const MUD = {
 
   primaryTextContent: MUD_BASE_URL + "#primaryTextContent",
   primaryImageContent: MUD_BASE_URL + "#primaryImageContent",
+};
+
+export const MUD_ACCT = {
+  account: MUD_ACCT_BASE_URL + "#Account",
+  charactersList: MUD_ACCT_BASE_URL + "#CharacterList",
 };
 
 export const MUD_CHARACTER = {
